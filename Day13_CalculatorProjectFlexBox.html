@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FlexBox Game</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: slategray;
+}
+h1{
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    padding-top: 4%;
+    font-size: 50px;
+}
+.container, .container1, .container2, .showResult{
+    display: flex;
+    justify-content: center;
+    width: 35vw;
+    margin-left: 32%;
+    flex-wrap: wrap;
+
+}
+.box, .b{
+    width: 7vw;
+    height: 12vh;
+    background-color: rgb(63, 186, 186);
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 10px;
+}
+.box h2{
+    font-size: 100px;
+    position: relative;
+    bottom: 15%;
+    text-align: center;
+}
+.box1{
+    width: 7vw;
+    height: 12vh;
+    background-color: palevioletred;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 10px;
+    flex-grow: 2;
+}
+
+#getNum{
+    width: 23vw;
+    border-radius: 20px;
+    background-color: palevioletred;
+    height: 11.5vh;
+    margin-left: 0px;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.bo2{
+    width: 7vw;
+    height: 12vh;
+    background-color: rgb(86, 104, 22);
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+
+.bo{
+    width: 7vw;
+    height: 12vh;
+    background-color: rgb(63, 186, 186);
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 10px;
+    flex-grow: 1;
+}
+
+.bo1{
+    width: 7vw;
+    height: 12vh;
+    background-color: palevioletred;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 10px;
+
+}
+.bo1 h2{
+    font-size: 85px;
+    font-weight: bolder;
+    position: relative;
+    bottom: 16%;
+    text-align: center;
+
+}
+
+.b1{
+    width: 7vw;
+    height: 12vh;
+    background-color: palevioletred;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 10px;
+    flex-grow: 1;
+}
+.b1 h2{
+    font-size: 85px;
+    font-weight: bolder;
+    position: relative;
+    bottom: 16%;
+    text-align: center;
+}
+
+.b2{
+    width: 7vw;
+    height: 12vh;
+    background-color: rgb(86, 104, 22);
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 10px;
+    flex-grow: 1;
+}
+.b2 h2{
+    font-size: 65px;
+    font-weight: bolder;
+    position: relative;
+    bottom: 16%;
+    text-align: center;
+    padding-top: 15px;
+}
+.result{
+    width: 7vw;
+    height: 12vh;
+    background-color: rgb(22, 111, 149);
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 10px;
+    flex-grow: 2;
+    font-size: 60px;
+    font-weight: bolder;
+    padding-top: 2%;
+    padding-left: 5%;
+    font-family:cursive;
+}
+
+.result h2{
+    font-size: 20px;
+    font-weight: bolder;
+}
+#getSecondNum{
+    width: 23vw;
+    border-radius: 20px;
+    background-color: #0e3d44;
+    height: 11.5vh;
+    margin-left: 0px;
+    font-size: 50px;
+    font-weight: bolder;
+}
+    </style>
+</head>
+<body>
+    <h1>CSS FlexBox🔽⬇😊 <br>FlexBox is working as a Calculator</h1>
+    <div class="showResult">
+        <div class="result">
+            <h2>See Result here🔽</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box"><h2>+</h2></div>
+        <div class="box1">
+            <input id="getNum" type="text" placeholder="Enter num">
+        </div>
+    </div>
+    <div class="container1">
+        <div class="bo">
+            <input id="getSecondNum" type="text" placeholder="Enter num">
+        </div>
+        <div class="bo1"><h2>✖</h2></div>
+    </div>
+    <div class="container2">
+        <div class="b1"><h2>➖</h2></div>
+        <div class="b2"><h2>➗</h2></div>
+    </div>
+<script src="Day13_CalculatorProjectFlexBox.js"></script>
+</body>
+</html>
