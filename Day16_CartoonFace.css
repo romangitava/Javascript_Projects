@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.comicFace{
+    display: grid;
+    grid-template-columns: 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw 4vw;
+    grid-template-rows: 6.5vh 6.5vh 6.5vh 6.5vh 6.5vh 6.5vh 6.5vh 6.5vh 6.5vh 6.5vh 6.5vh 6.5vh 6.5vh 6.5vh 6.5vh;
+    margin: 0.5% 0px 0px 15%;
+
+
+}
+.blackColorFirstRow{
+    background-color: black;
+    grid-column: 6/11;
+}
+
+.blackColorSecondRow{
+    background-color: black;
+    grid-row: 2;
+    grid-column: 4/6;
+
+}
+.greenColorSecondRow{
+    background-color: rgb(2, 103, 2);
+    grid-row: 2;
+    grid-column: 6/11;
+}
+.blackColorSecondRowAfterGreen{
+    background-color: black;
+    grid-row: 2;
+    grid-column: 11/13;
+}
+
+.blackColorThirdRow{
+    background-color: black;
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.greenColorThirdRow{
+    background-color: rgb(2, 103, 2);
+    grid-row: 3;
+    grid-column: 4/13;
+}
+.blackColorThirdRowAfterGreen{
+    background-color: black;
+    grid-row: 3;
+    grid-column: 13;
+}
+
+.blackColorForthRow{
+    background-color: black;
+    grid-row: 4;
+    grid-column: 2;
+}
+.greenColorForthRow{
+    background-color: rgb(2, 103, 2);
+    grid-row: 4;
+    grid-column: 3/14;
+}
+.blackColorForthRowAfterGreen{
+    background-color: black;
+    grid-row: 4;
+    grid-column: 14;
+}
+
+.blackColorFifthRow{
+    grid-row: 5;
+    grid-column: 2;
+    background-color: black;
+}
+.greenColorFifthRow{
+    background-color: rgb(2, 103, 2);
+    grid-row: 5;
+    grid-column: 3/14;   
+}
+
+.blackColorFifthRowAfterGreen{
+    background-color: black;
+    grid-row: 5;
+    grid-column: 14;
+}
+.blackColorSixthRow{
+    grid-row: 6;
+    grid-column: 1/16;
+    background-color: black;
+}
+
+.blackColorSeventhRow{
+    grid-row: 7;
+    grid-column: 1;
+    background-color: black;
+}
+.greenColorSeventhRow{
+    grid-row: 7;
+    grid-column: 2;
+    background-color: rgb(2, 103, 2);
+}
+
+.twoBlackColorSeventhRow{
+    grid-row: 7;
+    grid-column: 3/5;
+    background-color: black;
+}
+
+.whiteColorSeventhRow{
+    grid-row: 7;
+    grid-column: 5/7;
+
+}
+.threeBlackColorSeventhRow{
+    grid-row: 7;
+    grid-column: 7/11;
+    background-color: black;
+}
+.twoWhiteColorSeventhRow{
+    grid-row: 7;
+    grid-column: 11/13;
+
+}
+
+.oneBlackColorSeventhRow{
+    grid-row: 7;
+    grid-column: 13;
+    background-color: black;
+}
+.oneGreenColorSeventhRow{
+    grid-row: 7;
+    grid-column: 14;
+    background-color: rgb(2, 103, 2);
+}
+.oneBlackColorAgainSeventhRow{
+    grid-row: 7;
+    grid-column: 15;
+    background-color: black;
+}
+
+.blackColorEightRow{
+    grid-row: 8;
+    grid-column: 1;
+    background-color: black;
+}
+.greenColorEightRow{
+    grid-row: 8;
+    grid-column: 2;
+    background-color: rgb(2, 103, 2);
+}
+.twoBlackColorEightRow{
+    grid-row: 8;
+    grid-column: 3/6;
+    background-color: black;
+}
+.oneBlackColorEightRow{
+    grid-row: 8;
+    grid-column: 7  ;
+    background-color: black;
+}
+.oneGreenColorEightRow{
+    grid-row: 8;
+    grid-column: 8;
+    background-color: rgb(2, 103, 2);
+}
+.threeBlackColorEightRow{
+    grid-row: 8;
+    grid-column: 9/12;
+    background-color: black;
+}
+
+.oneBlackColorAgainEightRow{
+    grid-row: 8;
+    grid-column: 13;
+    background-color: black;
+}
+.oneGreenColorAgainEightRow{
+    grid-row: 8;
+    grid-column: 14;
+    background-color: rgb(2, 103, 2);
+}
+.onemoreBlackColorAgainEightRow{
+    grid-row: 8;
+    grid-column: 15;
+    background-color: black;
+}
+
+.blackColorNinthRow{
+    grid-row: 9;
+    grid-column: 1;
+    background-color: black;
+}
+.greenColorNinthRow{
+    grid-row: 9;
+    grid-column: 2/4;
+    background-color: rgb(2, 103, 2);
+}
+.threeBlackColorNinthRow{
+    grid-row: 9;
+    grid-column: 4/7;
+    background-color: black;
+}
+.threeGreenColorNinthRow{
+    grid-row: 9;
+    grid-column: 7/10;
+    background-color: rgb(2, 103, 2);
+}
+
+.threeBlackColorAgainNinthRow{
+    grid-row: 9;
+    grid-column: 10/13;
+    background-color: black;
+}
+
+.twoGreenColorNinthRow{
+    grid-row: 9;
+    grid-column: 13/15;
+    background-color: rgb(2, 103, 2);
+}
+.onemoreBlackColorNinthRow{
+    grid-row: 9;
+    grid-column: 15;
+    background-color: black;
+}
+
+.blackColorTenthRow{
+    grid-row: 10;
+    grid-column: 1;
+    background-color: black;
+}
+
+.greenColorTenthRow{
+    grid-row: 10;
+    grid-column: 2/15;
+    background-color: rgb(2, 103, 2);
+
+}
+
+.onemoreBlackColorTenthRow{
+    grid-row: 10;
+    grid-column: 15;
+    background-color: black;
+}
+
+.blackColorEleventhRow{
+    grid-row: 11;
+    grid-column: 2;
+    background-color: black;
+}
+
+.greenColorEleventhRow{
+    grid-row: 11;
+    grid-column: 3/14;
+    background-color: rgb(2, 103, 2);
+}
+.onemoreBlackColorEleventhRow{
+    grid-row: 11;
+    grid-column: 14;
+    background-color: black;
+}
+
+.blackColorTwelvethRow{
+    grid-row: 12;
+    grid-column: 2;
+    background-color: black;
+}
+
+.greenColorTwelvethRow{
+    grid-row: 12;
+    grid-column: 3/6;
+    background-color: rgb(2, 103, 2);
+}
+
+.oneBlackColorTwelvethRow{
+    grid-row: 12;
+    grid-column: 6;
+    background-color: black;
+}
+
+.threeGreenColorTwelvethRow{
+    grid-row: 12;
+    grid-column: 7/10;
+    background-color: rgb(2, 103, 2);
+}
+.onemoreBlackColorTwelvethRow{
+    grid-row: 12;
+    grid-column: 10;
+    background-color: black;
+}
+
+.threemoreGreenColorTwelvethRow{
+    grid-row: 12;
+    grid-column: 11/14;
+    background-color: rgb(2, 103, 2);
+
+}
+
+.onemoreBlackColorAgainTwelvethRow{
+    grid-row: 12;
+    grid-column: 14;
+    background-color: black;
+}
+
+.blackColorThirteenRow{
+    grid-row: 13;
+    grid-column: 3;
+    background-color: black;
+}
+.greenColorThirteenRow{
+    grid-row: 13;
+    grid-column: 4/7;
+    background-color: rgb(2, 103, 2);
+}
+.threeBlackColorThirteenRow{
+    grid-row: 13;
+    grid-column: 7/10;
+    background-color: black;
+}
+.threeGreenColorThirteenRow{
+    grid-row: 13;
+    grid-column: 10/13;
+    background-color: rgb(2, 103, 2);
+}
+.onemoreBlackColorThirteenRow{
+    grid-row: 13;
+    grid-column: 13;
+    background-color: black;
+}
+.blackColorForteenRow{
+    grid-row: 14;
+    grid-column: 4/6;
+    background-color: black;
+}
+.greenColorForteenRow{
+    grid-row: 14;
+    grid-column: 6/11;
+    background-color: rgb(2, 103, 2);
+}
+
+.twoBlackColorForteenRow{
+    grid-row: 14;
+    grid-column: 11/13;
+    background-color: black;
+}
+
+.blackColorFifteenRow{
+    grid-row: 15;
+    grid-column: 6/ 11;
+    background-color: black;
+}
