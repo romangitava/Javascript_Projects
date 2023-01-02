@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Board making only javascript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+/* ______________________________Get container of chessboard________________________*/
+
+        // to create a container of chessboard
+        let creatContainer = document.createElement("div")
+        creatContainer.setAttribute("id", "container")
+        document.body.append(creatContainer)
+
+        // Get <container> class to add some css
+        let getContainerOfCheesBoard = document.getElementById("container")
+        
+        //to be styled        
+        getContainerOfCheesBoard.style.display = "grid"
+        getContainerOfCheesBoard.style.gridTemplateColumns = "repeat(8, 10vw)"
+        getContainerOfCheesBoard.style.gridTemplateRows = "repeat(8, 15vh)"
+        getContainerOfCheesBoard.style.justifyContent = "center"
+        getContainerOfCheesBoard.style.marginTop = "5%"
+        
+
+/* ______________________________To creat a div with name _______________________*/
+
+       for (let i = 0; i<64; i++){
+        // creating element using createElement function
+        let createElement = document.createElement("div")
+        // to be name of class using setAttribute
+        createElement.setAttribute("class", "box")
+        // to add div in container of chessboard
+        getContainerOfCheesBoard.append(createElement)
+       }
+
+       // select all classes so that every boxes to be selected
+       let getClass = document.querySelectorAll(".box")
+
+/* ___________________________using loops to give color of boxes_________________________*/
+       for (let i in getClass){
+
+        // to give border of all boxes
+            getClass[i].style.border = "2px solid black"
+
+        // to give black color if i is not divisible by 2 and if range between 1 to 7 
+        if (i <= 7 && i % 2 != 0){ 
+           getClass[i].style.background = "black"
+        }
+
+        // to give black color if i is divisible by 2 and if range between 7 to 15 
+        
+        else if(i <=15 && i>7 && i % 2 == 0){
+           getClass[i].style.background = "black"
+        }
+
+        // to give black color if i is not divisible by 2 and if range between 15 to 23 
+
+        else if(i <= 23 && i>15 && i % 2 != 0){
+            getClass[i].style.background = "black"
+        }
+
+        // to give black color if i is divisible by 2 and if range between 23 to 31 
+
+        else if(i <= 31 && i>23 && i % 2 == 0){
+            getClass[i].style.background = "black"
+
+        }
+
+        // to give black color if i is not divisible by 2 and if range between 31 to 39 
+
+        else if (i <= 39 && i>31 && i % 2 != 0){
+            getClass[i].style.background = "black"
+        }
+
+        // to give black color if i is divisible by 2 and if range between 39 to 47
+
+        else if (i <= 47 && i > 39 && i % 2 == 0){
+            getClass[i].style.background = "black"
+        }
+
+        // to give black color if i is not divisible by 2 and if range between 47 to 55
+
+        else if (i <= 55 && i > 47 && i % 2 !=0){
+            getClass[i].style.background = "black"
+        }
+
+        // to give black color if i is not divisible by 2 and if range between 55 to 63 
+
+        else if (i<=63 && i >55 && i % 2 == 0){
+            getClass[i].style.background = "black"
+        }
+
+       }
+
+
+    </script>
+</body>
+</html>
