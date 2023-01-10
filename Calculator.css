@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: seagreen;
+}
+.container{
+    width: 28vw;
+    height: 72vh;
+    margin-top: 7%;
+    margin-left: 40%;
+    border-radius: 20px;
+    /* background-image: url('img/lucas-kapla-wQLAGv4_OYs-unsplash.jpg'); */
+    background-size: cover;
+    /* box-shadow: -4px -4px 20px 5px white; */
+    animation: borderAnimation 30s linear infinite;
+    background-color: seagreen;    
+}
+.container:hover{
+    animation: backgroundAnimation 30s linear infinite;
+}
+
+@keyframes borderAnimation {
+    from{
+        box-shadow: -4px -4px 20px 5px white;
+        
+    }
+    10%{
+        box-shadow: -4px -4px 20px 5px rgb(242, 164, 128); 
+    }
+    20%{
+        box-shadow: -4px -4px 20px 5px rgb(100, 246, 67);
+        
+    }
+    30%{
+        box-shadow: -4px -4px 20px 5px rgb(95, 212, 206);
+
+        
+    }
+    40%{
+        box-shadow: -4px -4px 20px 5px rgb(141, 74, 122);
+        
+    }
+    50%{
+        box-shadow: -4px -4px 20px 5px rgb(33, 34, 34);
+        
+    }
+    60%{
+        
+        box-shadow: -4px -4px 20px 5px rgb(229, 205, 69);
+    }
+    70%{
+        box-shadow: -4px -4px 20px 5px rgb(224, 113, 196);
+        
+    }
+    80%{
+        box-shadow: -4px -4px 20px 5px rgb(197, 118, 118);
+        
+    }
+    90%{
+        box-shadow: -4px -4px 20px 5px rgb(76, 96, 167);
+        
+    }
+    100%{
+        box-shadow: -4px -4px 20px 5px rgb(60, 28, 28);
+        
+    }
+}
+
+@keyframes backgroundAnimation {
+    from{
+        background-color: rgba(128, 255, 0, 0.563);
+        box-shadow: -4px -4px 20px 5px white;
+        
+    }
+    10%{
+        background-color: burlywood;
+        box-shadow: -4px -4px 20px 5px rgb(242, 164, 128); 
+    }
+    20%{
+        background-color: rgb(100, 246, 67);
+        box-shadow: -4px -4px 20px 5px rgb(100, 246, 67);
+        
+    }
+    30%{
+        box-shadow: -4px -4px 20px 5px rgb(95, 212, 206);
+        background-color: springgreen;
+    }
+    40%{
+        box-shadow: -4px -4px 20px 5px rgb(33, 34, 34);
+        background-color: crimson;
+    }
+    50%{
+        box-shadow: -4px -4px 20px 5px rgb(229, 205, 69);
+        background-color: rgb(229, 205, 69);
+        
+    }
+    60%{
+        box-shadow: -4px -4px 20px 5px rgb(95, 212, 206);
+        background-color: rgb(0, 0, 0);
+        color: white;
+    }
+    70%{
+        box-shadow: -4px -4px 20px 5px rgb(33, 34, 34);
+        background-color: rgb(60, 28, 28);
+        color: white;
+    }
+    80%{
+        background-color: skyblue;
+        box-shadow: -4px -4px 20px 5px rgb(229, 205, 69);
+    }
+    90%{
+        background-color: gray;
+        box-shadow: -4px -4px 20px 5px rgb(0, 0, 0);
+        color: white;
+    }
+    100%{
+        background-color: rgb(224, 113, 196);
+        box-shadow: -4px -4px 20px 5px rgb(60, 28, 28);
+        color: white;
+    }
+}
+
+#store-elements{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 4.2vw);
+    grid-template-rows: repeat(7, 4vw);
+    grid-gap: 2.5vh 2vw;
+    box-sizing: border-box;
+    padding: 10%;
+}
+.box{
+    /* padding: 30%; */
+    box-sizing: border-box;
+    box-shadow: -4px -4px 10px 3px white;
+    /* background-color: rgb(76, 173, 118); */
+    background-color: wheat;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    color:rgb(33, 34, 34) ;
+    font-family: romanFonts;
+    font-size: 40px;
+    cursor:context-menu ;
+}
+.button0{
+    font-family: romanFont;
+    font-size: 25px;
+    grid-column: 1/3;
+
+}
+ .button6{
+    font-size: 30px;
+}
+
+.button14, .button10, .button6{
+    font-size: 60px;
+}
+
+.box:hover{
+    background-color:thistle ;
+    
+}
+/* .button0{
+    grid-column: 1/5;
+    grid-row: 1/3;
+    margin-bottom: 5%;
+    box-shadow: -4px -4px 15px 5px wheat;
+    background-color:rgb(244, 226, 239) ;
+} */
+.button15{
+    grid-column: 1/3;
+}
+
+@font-face {
+    font-family: romanFont;
+    src: url('fonts/mabook/Mabook.otf');
+}
+@font-face {
+    font-family: romanFonts;
+    src: url('fonts/reglisse/Reglisse_Fill.otf');
+}
+
+#result{
+    margin-top: 2%;
+    margin-left: 5%;
+    padding-top: 10%;
+    padding-left: 5%;
+    box-sizing: border-box;
+    width: 25vw;
+    height: 15vh;
+    border-radius: 20px;
+    resize: none;
+    font-size: 40px;
+    font-family: cursive;
+    animation: backgroundAnimation 100s linear infinite;
+    border: 2px;
+    cursor: not-allowed;
+}
