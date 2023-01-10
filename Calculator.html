@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
+</head>
+<body>
+    <div class="container">
+        <textarea name="printResult" id="result" cols="3" rows="1"></textarea><br>
+        <div id="store-elements">
+            <div class="box button0">AC</div>
+            <div class="box button1">%</div>
+            <div class="box button2">/</div>
+            <div class="box button3">7</div>
+            <div class="box button4">8</div>
+            <div class="box button5">9</div>
+            <div class="box button6">*</div>
+            <div class="box button7">4</div>
+            <div class="box button8">5</div>
+            <div class="box button9">6</div>
+            <div class="box button10">-</div>
+            <div class="box button11">1</div>
+            <div class="box button12">2</div>
+            <div class="box button13">3</div>
+            <div class="box button14">+</div>
+            <div class="box button15">0</div>
+            <div class="box button16">.</div>
+            <div class="box button17">=</div>
+        </div>
+    </div>
+
+    <script>
+
+        // start making logic______________________________))))))))))))))))))))
+        
+            // create a string variable to store every <box> classes innerHTML
+            let string = "";
+
+            // get <box> all box classes
+            let getButtons = document.querySelectorAll(".box")
+
+            // get <reult> id to print result
+
+            let getResultId = document.getElementById("result")
+
+            // convert into an array and iterating using forEach loop
+            Array.from(getButtons).forEach((getButtons)=>{
+
+                getButtons.addEventListener("click", (e)=>{
+
+                    // condition if innerHTML = "="
+                    if(e.target.innerHTML == "="){
+                        string = eval(string);
+                        getResultId.value = string;
+                        
+                    }
+                    // condition if innerHTML = "AC"
+                    else if (e.target.innerHTML == "AC"){
+                        // clear input screen
+                        string = ""
+                        getResultId.value = string
+                    }
+                    else{
+                        // otherwise gives everyClasses innerHTML
+                        string = string + e.target.innerHTML;
+                        getResultId.value = string
+                    }
+
+                })
+            })
+
+            // _____________________________I wish you didn't face any problems, Code is easy to read and understandable___________________
+
+
+    </script>
+</body>
+</html>
