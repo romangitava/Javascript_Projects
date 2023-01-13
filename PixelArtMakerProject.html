@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Maker</title>
+    <link rel="stylesheet" href="PixelArtMakerProject.css">
+</head>
+<body>
+
+    <div id="loading"></div>
+    <h1 id="main-heading">Pixel Art</h1>
+    <div id="container-gridSet">
+        <h2 id="set-heading">Choose Grid Size</h2>
+         <p>Grid Height:</p>
+         
+        <input
+          type="text"
+          name="getHeight"
+          id="get-height"
+          class="value-design"
+          placeholder="Grid Height Cell"
+        />
+        
+        <p>Grid Width:</p>
+        <input
+          type="text"
+          name="getWidth"
+          id="get-width"
+          class="value-design"
+          placeholder="Grid Width Cell"
+        />  
+        <div id="btn-container">
+        <button id="create-grid" class="btn">Create Grid</button>
+        <button id="clear" class="btn">Clear</button>
+    </div>
+    <button id="erase" class="btn">EraseShadow</button>
+
+</div>
+<input type="color" class="getColor">
+
+    <div id="container-grid">
+    </div>
+<script src="PixelArtMakerProject.js"></script>
+</body>
+</html>
