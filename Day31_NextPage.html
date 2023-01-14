@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url('img/nick-fewings-XXBgxhS_-vc-unsplash.jpg');
+        }
+        .container{
+            margin: 20% auto;
+            display: grid;
+            grid-template-columns: repeat(12, 3vw);
+            grid-column-gap: 1.8vw;
+            grid-template-rows: 4.9vh;
+            width: 58vw;
+            height: 7vh;
+            background-color: rgba(0, 0, 0, 0.806);
+            border-radius: 5px;
+            color: gray;
+            /* place-items: center; */
+            align-content: center;
+
+        }
+        .pre{
+            align-self: center;
+            padding-left: 20%;
+            color: rgb(196, 4, 4);
+        }
+        .item{
+            font-size: 20px;
+            font-family: cursive;
+            cursor: pointer;            
+            text-align: center;
+            align-self: center;
+        }
+        .border:hover{  
+            padding-top: 5%;          
+            height: 4.3vh;
+            border-radius: 80px;
+            animation: hoverAnimation 3s ease-in-out infinite;
+        }
+        .clickEvent{
+            padding-top: 5%;          
+            height: 4.3vh;
+            border-radius: 80px;
+            border: 2px solid red;
+            color: red;
+        }
+        
+        @keyframes hoverAnimation {
+            from{
+                border: 2px solid aqua;
+            }
+            20%{
+                border: 2px solid red;
+            }
+            40%{
+                border: 2px solid seagreen;
+            }
+            60%{
+                border: 2px solid gold;
+            }
+            80%{
+                border: 2px solid grey;
+            }
+            100%{
+                border: 2px solid maroon;
+            }
+
+        }
+
+
+        .num1{
+            margin-left: 1%;
+        }
+        .item:hover{
+            color: red;
+        }
+        .next{
+            align-self: center;
+            color: rgb(196, 4, 4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item pre">Prev</div>
+    </div>
+    <script>
+        // get <container> class 
+            let getContainer = document.getElementsByClassName("container")[0]
+
+            // using for loop to create elements inside the <container> class
+            for (let i = 1; i<=10; i++){
+                getContainer.insertAdjacentHTML("beforeend", `<div class='item border num${i}'>${i}</div>`)
+            }
+            // insert elements at the end of container
+            getContainer.insertAdjacentHTML("beforeend", `<div class='item next'>Next</div>`)
+
+            
+//______________________________ get <border> classes when user click on_______________________
+            let getBorderClasses = document.querySelectorAll(".border")
+            
+
+            // using for loop to giveBorder
+            for (let giveStyles = 0; giveStyles < getBorderClasses.length; giveStyles++){
+                getBorderClasses[giveStyles].addEventListener("click", function(){
+                    // to give on a perticulator index
+                    getBorderClasses[giveStyles].classList.add("clickEvent")
+
+
+                    // check index before values so that we can remove border before the index  Exaple if user enter on 5 index then this loop run 0 to 4 index
+                    for(let storeBeforeNum = 0; storeBeforeNum<giveStyles; storeBeforeNum++){
+
+                        // it check 0 to 4 index if it has border then go in if statement and remove border
+                        if(getBorderClasses[storeBeforeNum].classList.contains("clickEvent")){
+                            getBorderClasses[storeBeforeNum].classList.remove("clickEvent")
+                        }
+                    }
+
+
+                    // check index after values so tha we can remove border after the index Example if user enter on 5 index then this loop run 6 to length of <border> class 
+                    for(let storeNum = giveStyles+1; storeNum<getBorderClasses.length; storeNum++){
+                        // it check 6 to length of <border> class if it has border then go in if statement and remove border
+                        if(getBorderClasses[storeNum].classList.contains("clickEvent")){
+                            getBorderClasses[storeNum].classList.remove("clickEvent")
+                        }
+                    }
+                })
+            }
+
+
+
+
+
+
+//__________________start logic if user enter on 'next' or 'prev' button__________________
+
+            // get <next> button 
+            let getNextButton = document.getElementsByClassName("next")[0]
+
+            
+            
+        
+//_____________________________For Next Button to go 1 step ahead_______________________
+            getNextButton.addEventListener("click", function(){
+
+                // get <clickEvent> class so that we can find where user click
+                    let getclickEventClass = document.getElementsByClassName("clickEvent")[0]
+                    
+                    
+                    // before adding border anywhere firts i have to remove border where is <clickEvent> class
+                        getclickEventClass.classList.remove("clickEvent")
+                        
+                    // using for loop to add border 1 step ahead
+                    for (let goNext = Number.parseInt(getclickEventClass.innerHTML); goNext<getBorderClasses.length; goNext++){
+                        
+                        getBorderClasses[goNext].classList.add("clickEvent")   
+                        break // when the border has been once we'll have to break the loop otherwise it gives all classes
+                }
+
+            })
+            
+//______________________________For Previous Button to go 1 step back______________________
+            
+            // get <prev> button
+            let getPreButton = document.getElementsByClassName("pre")[0]
+
+            getPreButton.addEventListener("click", function(){
+                
+            // get <clickEvent> class so that we can find where user click
+            let getclickEventClass = document.getElementsByClassName("clickEvent")[0]
+            
+            // before adding border anywhere firts i have to remove border where is <clickEvent> class
+            getclickEventClass.classList.remove("clickEvent")
+
+            // using for loop to add border 1 step back
+
+            for (let getBack = getclickEventClass.innerHTML-1; getBack >=0; getBack--){
+                getBorderClasses[getBack-1].classList.add("clickEvent")
+                break   // when the border has been once we'll have to break the loop otherwise it gives all classes
+                   
+            }
+            })
+
+    </script>
+</body>
+</html>
