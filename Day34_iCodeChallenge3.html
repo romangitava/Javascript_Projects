@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image add</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @font-face {
+            font-family: romanFont;
+            src: url('fonts/genty/GentyDemo-Regular.otf');
+        }
+        body{
+            background-color: gray;
+        }
+        h1{
+            font-family: romanFont;
+            font-size: 80px;
+            text-align: center;
+        }
+        .container{
+            margin-top: 5%;
+            display: grid;
+            grid-template-columns: repeat(4, 20vw);
+            grid-template-rows: repeat(1, 15vw);
+            grid-gap: 2vw 2vw;
+            justify-content: center;
+            
+        }
+        .box{
+            /* border: 2px solid black; */
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        img{
+            box-shadow: -4px -4px 20px 10px rgba(0, 0, 0, 0.387);
+            width: 20vw;
+            height: 15vw;
+            /* background-image: url('imgs/jimmy.jpg'); */
+            background-size: cover;
+            border-radius: 5px;
+        }
+        .add-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            place-items: center;
+            margin: 10% auto;
+            width: 20vw;
+            height: 15vw;
+            box-shadow: -4px -4px 20px 10px rgba(0, 0, 0, 0.387);
+
+            /* border: 2px solid black; */
+        }
+        .sign{
+          margin-bottom: 10%;  
+          /* border: 2px solid black; */
+        }
+        p{
+            font-family: cursive;
+            font-size: 20px;
+        }
+
+        /* For Mobile Device */
+
+        @media (min-width:200px) and (max-width:450px) {
+            h1{
+                font-size: 15px;
+                font-family: cursive;
+            }
+            p{
+                font-size: 10px;
+            }
+            .container{
+                grid-template-columns: repeat(2, 45vw);
+                grid-gap: 5vh 5vw;
+                grid-template-rows: repeat(1, 35vw);
+            }
+            img{
+                width: 45vw;
+                height: 35vw;
+            }
+            .add-box{
+                margin-top: 200% auto;
+            }
+        }
+
+        /* For iPad Device */
+        @media (min-width: 600px) and (max-width:1050px) {
+            h1{
+                font-size: 30px;
+                color: maroon;
+            }
+            .container{
+                grid-template-columns: repeat(3, 28vw);
+                grid-template-rows: repeat(1, 28vw);
+                grid-gap: 4vh 5vw;
+
+            }
+            img{
+                width: 28vw;
+                height: 28vw;
+            }
+        }
+
+        @media (min-width:1400px) and (max-width:1500px) {
+            h1{
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Roman Image Add Challenge</h1>
+    <div class="container">
+        <div class="box add-after-box">
+            <img src="imgs/burger.jpg">
+        </div>    
+    </div>
+    
+    <div class="box add-box">
+        <div class="sign">➕ </div>
+        <p>Add More</p>
+    </div>
+
+    <script>
+       // get <container> class
+        let getContainer = document.getElementsByClassName("container")[0]
+
+        // get <add-box> class so that we can create elements inside the <container> class
+        let getBoxToCreateElement = document.getElementsByClassName("add-box")[0]
+
+        // images container
+        let imageContainer = ['jimmy', 'roman', 'readydish', 'cont-frouit (2)', 'cont-frouit (1)', 'readydish', 'finishlunch', 'fruits', 'car3', 'chocklate', 'eggdish', 'egg', 'girlight', 'chilli', 'grapes-container', 'crax', 'plate-dish', 'potoato', 'fruit-container', 'georage', 'julia-jimmy', 'josan-fruit', 'bucket-fruit', 'triangle-plate', 'sun-fruit', 'purple-fruit', 'crunch', 'ella-dish', 'ella-dish1', 'food-photograph', 'food-photographer', 'josan-fruit', 'stones-fruit', 'romain-fruit', 'tari', 'light-dish', 'mae-dish', 'ananas']
+
+        // create a variable and passed by default 1 so that we it adds row it can't remove previous row
+        let createRow = 1
+
+        // add click event so that we can create new elements
+        getBoxToCreateElement.addEventListener("click", function(){
+            getContainer.insertAdjacentHTML("beforeend", "<div class='box cell'></div>")
+
+            // get <cell> classes so that we can insert images
+            let getCells = document.querySelectorAll(".cell")
+            
+
+            // insert images beforeend of <getCells> class
+            getCells[getCells.length-1].insertAdjacentHTML("afterbegin", `<img src='imgs/${imageContainer[getCells.length-1]}.jpg'>`)
+            
+
+            // get length of <box> class
+            let getLengthOfBox = document.querySelectorAll(".box")
+            // condition if <box> is more than 3 then go in if statement and create new row
+
+            if((getLengthOfBox.length-2) % 4 == 0){
+                getContainer.style.gridTemplateRows = `repeat(${createRow+=1}), 15vw`
+            }
+
+        })
+            
+        
+
+    </script>
+</body>
+</html>
